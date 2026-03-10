@@ -438,7 +438,7 @@ st.markdown(f"""
 
 st.caption(
     "SocialGist Marketplace Data  |  Snowflake Cortex **AI SQL Functions**  |  "
-    "85K+ Social Posts  |  Pulsar-Equivalent Capabilities"
+    "85K+ Social Posts  |  Capabilities better than Pulsar with as needed customizations"
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
