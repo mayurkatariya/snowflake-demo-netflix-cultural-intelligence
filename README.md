@@ -28,7 +28,8 @@ A Streamlit-in-Snowflake application for analyzing cultural trends across TikTok
 2. Click **+ Streamlit App**
 3. Choose a database, schema, and warehouse
 4. Paste the contents of `streamlit_app_aisql.py` into the code editor
-5. Click **Packages** and ensure these are listed: `snowflake-snowpark-python`, `streamlit`, `altair`
+5. Click **Packages** and add: `altair`, `snowflake.core`
+   > **Note:** `streamlit`, `snowflake-snowpark-python`, and `pandas` are already bundled in the Streamlit-in-Snowflake runtime — do **not** add them manually, as they can cause package resolution conflicts.
 6. Click **Run**
 
 ## Deploy via SQL
@@ -108,6 +109,7 @@ All data comes from the **SocialGist AI-Ready Social Data** Snowflake Marketplac
 
 | Issue | Fix |
 |---|---|
+| `Cannot create a Python function with the specified packages` | Remove `snowflake`, `snowflake-snowpark-python`, and `streamlit` from your packages/environment.yml — they are bundled in the SiS runtime and cause version conflicts. Only `altair` and `snowflake.core` are needed. |
 | `Object does not exist: NETFLIX__ROMANTASY_AIREADY_SOCIAL_DATA` | Install the SocialGist listing from Snowflake Marketplace |
 | `Cortex Search Service not found` | The search services are created by the SocialGist listing -- ensure the listing is fully installed |
 | `AI_COMPLETE / AI_SENTIMENT not recognized` | Ensure your account has Cortex AI SQL Functions enabled and your role has SNOWFLAKE.CORTEX_USER |
