@@ -172,6 +172,9 @@ st.markdown(f"""
         color: {NETFLIX_WHITE};
         border: 1px solid {NETFLIX_MID_GRAY};
     }}
+    .stTextInput > div > div > input::placeholder {{
+        color: #999999 !important;
+    }}
 
     /* Selectbox */
     .stSelectbox > div > div {{
