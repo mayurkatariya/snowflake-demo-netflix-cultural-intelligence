@@ -28,8 +28,8 @@ A Streamlit-in-Snowflake application for analyzing cultural trends across TikTok
 2. Click **+ Streamlit App**
 3. Choose a database, schema, and warehouse
 4. Paste the contents of `streamlit_app_aisql.py` into the code editor
-5. Click **Packages** and add: `altair`, `snowflake.core`
-   > **Note:** `streamlit`, `snowflake-snowpark-python`, and `pandas` are already bundled in the Streamlit-in-Snowflake runtime — do **not** add them manually, as they can cause package resolution conflicts.
+5. Click **Packages** and add: `streamlit` (version >=1.33.0), `altair`, `snowflake.core`
+   > **Note:** Do **not** add `snowflake` (the meta-package) or `snowflake-snowpark-python` — they cause package resolution conflicts.
 6. Click **Run**
 
 ## Deploy via SQL
